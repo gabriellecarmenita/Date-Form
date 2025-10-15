@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="eng" dir="ltr"> 
+    <head>
+        <meta charset="utf-8">
+
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap">
+
+        <title>₊‧°𐐪♡𐑂°‧₊</title>
+    </head>
+
+    <body>
+        <section id="top">
+            <h1>Order Form.</h1>
+        <br>
+        <form id="form">
+            <label for="name">Contact Information</label>
+        <br>
+            <input id="name" name="name" type="text" required placeholder="Name*">
+            <input id="last-name" name="last-name" type="text" placeholder="Other">
+        <br>
+            <label for="age">Age</label>
+        <br>
+            <select id="age" name="age" type="age" required>
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+                <option value="16">16</option>
+                <option value="17">17</option>
+                <option value="18">18</option>
+                <option value="19">19</option>
+                <option value="20">20</option>
+                <option value="21">21</option>
+                <option value="22">22</option>
+                <option value="23">23</option>
+                <option value="24">24</option>
+                <option value="25">25</option>
+            </select>
+        <br>
+      
+            <span>
+                <p>Are you</p>
+            <div class="radio-group">
+                <input id="taken-1" name="answer-1" type="radio" value="taken-1" class="custom-button" required >
+                <label for="taken-1">Taken?</label>
+            </div>
+            
+            <div class="radio-group">
+                <input id="taken" name="answer-1" type="radio" value="taken" class="custom-button">
+                <label for="taken">Taken.</label>
+            </div>
+            </span>
+        
+            <span>
+                <p>Would you like to go for a date?</p>
+            <div class="radio-group">
+                <input id="yes" name="answer-2" type="radio" value="yes" class="custom-button" required>
+                <label for="yes">Yes!</label>
+            </div>
+
+            <div class="radio-group">
+                <input id="no" name="answer-2" type="radio" value="no" class="custom-button">
+                <label for="no">No :(</label>
+            </div>
+            </span>
+
+                <p>Date Location</p>
+            <span class="radio-location">
+            <div class="radio-group">
+                <input id="aquarium" name="location" type="radio" value="aquarium" class="custom-button" required>
+                <label for="aquarium">Aquarium</label>
+            </div>
+
+            <div class="radio-group">
+                <input id="cinema" name="location" type="radio" value="cinema" class="custom-button">
+                <label for="cinema">Cinema</label>
+            </div>
+
+            <div class="radio-group">
+                <input id="cooking" name="location" type="radio" value="cooking" class="custom-button">
+                <label for="cooking">Cooking</label>
+            </div>
+
+            <div class="radio-group">
+                <input id="netflix" name="location" type="radio" value="netflix" class="custom-button">
+                <label for="netflix">JUST Netflix?</label>
+            </div>
+
+            <div class="radio-group">
+                <input id="chill" name="location" type="radio" value="chill" class="custom-button">
+                <label for="chill">JUST Chill?</label>
+            </div>
+
+            <div class="radio-group">
+                <input id="photobooth" name="location" type="radio" value="photobooth" class="custom-button">
+                <label for="photobooth">Photobooth</label>
+            </div>
+
+            <div class="radio-group">
+                <input id="picnic" name="location" type="radio" value="picnic" class="custom-button">
+                <label for="picnic">Picnic</label>
+            </div>
+
+            <div class="radio-group">
+                <input id="museum" name="location" type="radio" value="museum" class="custom-button">
+                <label for="museum">Museum</label>
+            </div>
+
+            <div class="radio-group">
+                <input id="zoo" name="location" type="radio" value="zoo" class="custom-button">
+                <label for="zoo">Zoo</label>
+
+            </div>
+            </span>
+       
+            <label for="whole-day">Second Location</label>
+        <br>
+            <input id="whole-day" name="whole-day" type="text" placeholder="Please state choice.">
+        <br>
+            <label for="event-date">Choose date</label>
+        <br>
+            <input id="event-date" name="event-date" type="date" required>
+        <br>
+            <label for="event-time">Choose time</label>
+        <br>
+            <input id="event-time" name="event-time" type="time" required>
+        <br>
+
+        <input value="Submit" type="submit" class="custom-submit">
+        </form>
+        </section>
+    
+    </body>
+
+    <script>
+        const scriptURL =  'https://script.google.com/macros/s/AKfycbw7SKOIELPjAvTLQBFpRjl9Veu714OAuWqNn5hu_EDit77bIMc-a0y3AGRRfArkfztv/exec' 
+        const form = document.querySelector('#form')
+
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+
+            console.log(form)
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+            .then(response => { alert('⋆౨ৎ˚⟡˖ ࣪Reviewing form⋆౨ৎ˚⟡˖ ࣪', response) })
+            .catch(error => alert('Error!', error.message))
+
+        })
+       
+    </script>
+</html>

@@ -1,0 +1,137 @@
+body {
+    background-color: #F9F6EE;
+    font-family: 'Roboto', sans-serif;
+}
+
+h1{
+    text-align: left;
+    padding-left: 5%;
+}
+
+form{
+    padding-left: 10%;
+    line-height: 32px;
+    position: relative;
+    
+}
+
+p{
+    margin: 0px;
+    font-weight: 800;
+}
+
+label[for="name"], label[for="age"], label[for="whole-day"], label[for="event-time"], label[for="event-date"]{
+    font-weight: 800;
+}
+
+#top {
+    background-color: white;
+    margin: 2% 15%;
+    border-radius: 15px;
+    min-height: 90vh;
+    overflow: auto;
+    padding: 2%;
+
+    text-align: left;
+}
+
+#last-name{
+    margin-left: 20px;
+}
+
+input[type="text"], input[type="number"] {
+    min-height: 15px;
+    border-radius: 15px;
+    border:1px solid #3B3B3B;
+
+}
+
+input[type="date"],input[type="time"]{
+    
+    border-radius: 15px;
+    border:1px solid #3B3B3B;
+    width: 174px;
+
+    padding: 0 10px;
+    height: 30px;
+    font-size: 13px;
+}
+
+input[placeholder] {
+    padding: 0 15px;
+    height: 30px;
+
+    font-size: 13px;
+}
+
+.radio-location{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    
+}
+.radio-group{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    
+    font-size: 13px;
+}
+
+.custom-button {
+    -webkit-appearance: none;
+    appearance: none;
+
+    width: 20px;
+    height: 20px;
+
+    border: 1px solid #3B3B3B;
+    border-radius: 50%;
+    cursor: pointer;
+
+    position: relative;
+}
+
+
+.custom-button::after{
+    content: '';
+    display: block;
+
+    background-color: transparent;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    
+    width: 15px;
+    height: 15px;
+}
+
+.custom-button:checked::after {
+    background: #ED8093;
+    transform: translate(-50%, -50%) scale(0.75); 
+}
+
+.custom-submit{
+    -webkit-appearance: none;
+    appearance: none;
+
+    width: 20%;
+    max-width: 100px;
+
+    background-color: #3B3B3B;
+    border: 1px solid #3B3B3B;
+    color: #F9F6EE;
+    border-radius: 20px;
+    padding: 8px;
+    cursor: pointer;
+
+    position: absolute;
+    bottom: 10x;
+    right: 10px;
+    z-index: 1000;
+
+    font-size: 13px;
+}
+
